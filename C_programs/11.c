@@ -1,4 +1,5 @@
-// Create a program to find subtraction of two numbers.
+// Question 11
+//  Create a program to find subtraction of two numbers.
 #include <stdio.h>
 
 int main()
@@ -8,8 +9,8 @@ int main()
     scanf("%d", &a);
     printf("Enter value of b: ");
     scanf("%d", &b);
-    c = a * b;
-    printf("of two numbers is numbers are %d", c);
+    c = a - b;
+    printf("Subtraction of two numbers is numbers are  %d", c);
 
     return 0;
 }

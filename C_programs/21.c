@@ -1,10 +1,10 @@
-//  Create a program to solve the expression x=(a+b*c)/(d+e)
+// Question 21
+//   Create a program to solve the expression x=(a+b*c)/(d+e)
 #include <stdio.h>
 
 int main()
 {
-    float a, b, c, d, e;
-    float x;
+    float a, b, c, d, e, x;
 
     printf("Enter value of a ");
     scanf("%f", &a);

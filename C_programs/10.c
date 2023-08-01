@@ -1,4 +1,5 @@
-//  Create a program to find Addition of three numbers.
+// Question 10
+//   Create a program to find Addition of three numbers.
 #include <stdio.h>
 
 int main()
@@ -11,7 +12,7 @@ int main()
     printf("Enter value of c: ");
     scanf("%d", &c);
 
-    printf("Sum of all three numbers are %d", a + b + c);
+    printf("Sum of all three numbers are  %d", a + b + c);
 
     return 0;
 }

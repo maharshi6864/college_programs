@@ -1,4 +1,5 @@
-// Write a program to calculate the area and circumference of a circle.
+// Question 2
+//  Write a program to calculate the area and circumference of a circle.
 
 #include <stdio.h>
 
@@ -8,7 +9,7 @@ int main()
     printf("Enter value of radius: ");
     scanf("%f", &radius);
     float circum = 2 * pie * radius;
-    printf("Circumference of circle having radius %.2f will be >>%.2f \n", radius, circum);
+    printf("Circumference of circle having radius %.2f will be is  %.2f \n", radius, circum);
     float area = radius * pie * radius;
-    printf("\nArea of circle having radius %.2f will be >>%.2f \n", radius, area);
+    printf("Area of circle having radius %.2f will be is  %.2f \n", radius, area);
 }

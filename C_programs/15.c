@@ -1,4 +1,5 @@
-// Create a program to find simple interest.
+// Question 15
+//  Create a program to find simple interest.
 
 #include <stdio.h>
 

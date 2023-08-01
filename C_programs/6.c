@@ -1,4 +1,5 @@
-// Write a program to convert the temperature from degree Fahrenheit to centigrade
+// Question 6
+//  Write a program to convert the temperature from degree Fahrenheit to centigrade
 
 #include <stdio.h>
 

@@ -1,4 +1,5 @@
-// Write a Program to multiply two Floating Point Numbers.
+// Question 1
+//  Write a Program to multiply two Floating Point Numbers.
 
 #include <stdio.h>
 

@@ -1,5 +1,6 @@
-// Create a program to convert temperature from celsius to fahrenheit and fahrenheit
-// to celsius.
+// Question 20
+//  Create a program to convert temperature from celsius to fahrenheit and fahrenheit
+//  to celsius.
 
 #include <stdio.h>
 

@@ -1,4 +1,5 @@
-// Create a program to swap values of two variables withou varible
+// Question 16
+//  Create a program to swap values of two variables withou varible
 
 #include <stdio.h>
 
@@ -23,5 +24,5 @@ int main()
     b = a - b;
     a = a - b;
 
-    printf("\nValue of a >>%d \nValue of b >>%d", a, b);
+    printf("\nValue of a is  %d \nValue of b is  %d", a, b);
 }

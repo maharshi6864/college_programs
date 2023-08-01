@@ -1,4 +1,5 @@
-// Write a program to convert the temperature from degree centigrade to Fahrenheit.[C
+// Question 7
+//  Write a program to convert the temperature from degree centigrade to Fahrenheit.[C
 //= ((F-32)*5)/9]
 
 #include <stdio.h>

@@ -1,4 +1,5 @@
-// Create a program to find division of three numbers.
+// Question 12
+//  Create a program to find division of three numbers.
 #include <stdio.h>
 
 int main()

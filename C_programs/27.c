@@ -1,5 +1,6 @@
-// Write a program to print following pyramid with the help of escape sequence.
-// Write a program to print following pyramid with the help of escape sequence.
+// Question 27
+//  Write a program to print following pyramid with the help of escape sequence.
+
 #include <stdio.h>
 
 int main()

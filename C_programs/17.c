@@ -1,4 +1,5 @@
-// Create a program to find area of triangle.
+// Question 17
+//  Create a program to find area of triangle.
 
 #include <stdio.h>
 
@@ -10,6 +11,6 @@ int main()
     scanf("%d", &h);
     printf("Enter value of breath of triangle : ");
     scanf("%d", &b);
-    float area = b * h / 2;
-    printf("Area of triangle is : %.2f", area);
+    float area = (float)b * h / 2;
+    printf("Area of triangle is  %.2f", area);
 }

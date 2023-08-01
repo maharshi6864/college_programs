@@ -1,15 +1,16 @@
-// Write a program to print character of a particular ascii value.
+// Question 26
+//  Write a program to print character of a particular ascii value.
 
 #include <stdio.h>
 
 int main()
 {
-    int asciiValue;
+    char asciiValue;
 
     printf("Enter an ASCII value : ");
-    scanf("%d", &asciiValue);
+    scanf("%c", &asciiValue);
 
-    printf("Character for ASCII value %d is '%c'\n", asciiValue, (char)asciiValue);
+    printf("ASCII value for Character '%c' is %d\n", asciiValue, (int)asciiValue);
 
     return 0;
 }

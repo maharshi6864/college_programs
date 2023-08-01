@@ -1,4 +1,5 @@
-// Write a program to calculate the sum of 5 subject and find the percentage
+// Question 8
+//  Write a program to calculate the sum of 5 subject and find the percentage
 
 #include <stdio.h>
 

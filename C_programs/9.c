@@ -1,4 +1,5 @@
-// Create a program to display GLS Institute of Computer Applications.
+// Question 9
+//  Create a program to display GLS Institute of Computer Applications.
 
 #include <stdio.h>
 
