@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    border: 3px solid red;
+    color: green;
+    background-color: yellow;
+    padding: 20px;
+    font-weight: 1000;
+}
+
+h3{
+    border: 3px dotted purple;
+    background-color: pink;
+    color: purple;
+    font-size: 30px;
+}
+
+p{
+    color: red;
+    font-size: 20px;
+}
+
+ol{
+    background-color: #d1ff9d;
+    color: red;
+    border: 4px dashed blue;
+}
+
+li::first-letter{
+    font-size: 40px;
+}
