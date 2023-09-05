@@ -12,10 +12,10 @@ int main()
     unsigned long ux = 2541567890;
 
     // Expressions
-    int r1 = a + c;
+    int r1 = a + c;//implict conversion
     printf("Result 1 : %d\n", r1);
 
-    int r2 = x + c;
+    int r2 = x + c;//im
     printf("Result 2 : %d\n", r2);
 
     double r3 = ((double)dx + (double)x);
