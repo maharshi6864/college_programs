@@ -13,7 +13,7 @@ int main()
     printf("Enter the value you want to enter in postion you have entered :");
     scanf("%d", &value);
 
-    for (int i = 10; i >= pos - 1; i--)
+    for (int i = 11; i > pos - 1; i--)
     {
         a[i + 1] = a[i];
     }

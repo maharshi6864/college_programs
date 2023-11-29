@@ -1,0 +1,21 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+table{
+    width: 50%;
+    border: 1px solid black;
+
+}
+
+tr,td,th{
+    border: 1px solid black;
+    text-align: start;
+    padding: 40px;
+}
+
+th:hover,td:hover{
+    background-color: green;
+   
+}
