@@ -1,0 +1,28 @@
+<!-- 1. Write a JavaScript to demonstrate the to declare a variable of number 
+and string from the user and display it. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 1</title>
+  </head>
+  <body>
+    Enter number : <input type="number" id="number" /> <br /><br />
+    Enter String :
+    <input type="text" name="" id="string" />
+    <br /><br />
+    <button onclick="display()">Sumit</button>
+    <script>
+      let num = 0;
+      let str = "";
+      function display() {
+        num = parseInt(document.getElementById("number").value);
+        str = document.getElementById("string").value;
+        alert(`number : ${num}
+string :${str}`);
+      }
+    </script>
+  </body>
+</html>
