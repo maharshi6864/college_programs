@@ -1,0 +1,35 @@
+<!-- 11.Write an external JavaScript code to enter the age of the candidate and
+ check whether he/she will be eligible for a vote or not with the use of a
+ conditional ternary operator. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Question 11</title>
+  </head>
+  <body>
+    <h2>
+      Enter your personal details to check that either you are Eligible for
+      voting or not
+    </h2>
+    First Name<input type="text" name="" id="fname" /> <br /><br />
+    Last Name<input type="text" name="" id="lname" /><br /><br />
+    Age: <input type="number" name="" id="age" /> <br /><br />
+    <p id="ans"></p>
+    <button onclick="check()">Check</button>
+
+    <script>
+      function check() {
+        let age = document.getElementById("age").value;
+        let firstname = document.getElementById("fname").value;
+        let lastname = document.getElementById("lname").value;
+        age >= 18
+          ? (document.getElementById(
+              "ans"
+            ).innerHTML = `${lastname.toUpperCase()} ${firstname.toUpperCase()} you are eligible for voting`)
+          : (document.getElementById(
+              "ans"
+            ).innerHTML = `${lastname.toUpperCase()} ${firstname.toUpperCase()} you are not eligible for voting`);
+      }
+    </script>
+  </body>
+</html>

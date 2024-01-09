@@ -1,0 +1,25 @@
+<!-- 8. Write a JavaScript code to create a function for the addition of two 
+numbers. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Question 8</title>
+  </head>
+  <body>
+    <h2>Enter numbers to add!</h2>
+    Enter number 1: <input type="text" name="" id="num1" />
+    <br />
+    Enter number 2: <input type="text" name="" id="num2" />
+    <br />
+    <p>Answer : <span id="ans">0</span></p>
+    <button onclick="add()">Add</button>
+    <script>
+      function add() {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        document.getElementById("ans").innerHTML =
+          parseInt(num1) + parseInt(num2);
+      }
+    </script>
+  </body>
+</html>

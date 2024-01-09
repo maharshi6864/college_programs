@@ -1,0 +1,27 @@
+<!--  9. Write a JavaScript code to create a function with a return type to find
+ an area of a circle and the result will be displayed in an alert box.
+ (Declare pi value as constant) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Question 9</title>
+  </head>
+  <body>
+    Enter radius of circle :
+    <input type="text" name="" id="radius" />
+    <br />
+    <p>Area of circle is : <span id="ans">0</span></p>
+    <button onclick="cal()">Calculate</button>
+    <script>
+      const p = 3.14159265359;
+      function cal() {
+        let r = document.getElementById("radius").value;
+        document.getElementById("ans").innerHTML = areaOfCircle(r);
+      }
+
+      function areaOfCircle(radius) {
+        return radius * radius * p;
+      }
+    </script>
+  </body>
+</html>
