@@ -1,0 +1,61 @@
+<!-- 12.Write an external JavaScript code to create a function with a return type
+ and parameter to enter 5 subject marks from the user and find the
+ percentage of it and check to give the Grades accordingly.
+ 35< Fail 
+35>average 
+50>second class
+ 60>First class 
+70>Distinction -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Question 12</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body,
+    html {
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: bisque;
+    }
+  </style>
+  <body>
+    <div class="cont">
+      <h1>
+        Enter your 5 Subject marks to calculate <br />
+        the total and percentage of it !
+      </h1>
+      <br /><br />
+      Enter marks of English : <input type="number" id="english" /> <br /><br />
+      Enter marks of Maths : <input type="number" id="maths" /> <br /><br />
+      Enter marks of Hindi : <input type="number" id="hindi" /> <br /><br />
+      Enter marks of Science : <input type="number" id="sci" /> <br /><br />
+      Enter marks of Social Science :
+      <input type="number" id="ss" /> <br /><br />
+      <p>
+        Percentage :- <span id="per">0%</span> <br />
+        <br />
+        Total Marks obtained :-
+        <span id="marks">0/500</span>
+        <br />
+        <br />
+        Grade :- <span id="grade"></span>
+      </p>
+      <br />
+      <button onclick="calculate()">Submit</button>
+    </div>
+    <script src="12.js"></script>
+  </body>
+</html>
