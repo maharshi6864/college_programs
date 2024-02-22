@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <title>Question 4</title>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <form onsubmit="validate(); return false;">
+      <label for="first-name">FirstName*</label>
+      <input type="text" name="" id="first-name" />
+      <br /><br />
+      <label for="last-name">LastName*</label>
+      <input type="text" name="" id="last-name" />
+      <br /><br />
+      <label for="">Gender*:</label>
+      <input type="radio" name="gender" id="male" value="Male" /><label
+        for="male"
+        >Male</label
+      ><input type="radio" name="gender" id="female" value="female" /><label
+        for="female"
+        >Female</label
+      >
+      <br /><br />
+      <label for=""> Hobbies*:</label>
+      <input
+        type="checkbox"
+        name="hobbies"
+        id="cricket"
+        value="cricket"
+      /><label for="cricket">Criket</label
+      ><input
+        type="checkbox"
+        name="hobbies"
+        id="singing"
+        value="singing"
+      /><label for="singing">Singing</label>
+      <input
+        type="checkbox"
+        name="hobbies"
+        id="dancing"
+        value="dancing"
+      /><label for="dancing">Dancing</label> <br /><br />
+      <label for="country"> Country </label>
+      <select name="" id="country">
+        <option value="null" disabled selected>Select Country</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="China">China</option>
+        <option value="Japan">Japan</option>
+      </select>
+      <br /><br />
+      <button type="submit">Validate feilds</button>
+    </form>
+    <div id="ans">
+      <p id="first-ans"></p>
+      <p id="last-ans"></p>
+      <p id="gender-ans"></p>
+      <p id="hobbies-ans"></p>
+      <p id="country-ans"></p>
+    </div>
+    <script>
+      function validate() {
+        var x = document.getElementById("first-name").value;
+        var y = document.getElementById("last-name").value;
+        var z = document.getElementById("country").value;
+        var gender = document.getElementsByName("gender");
+        var hobbies = document.getElementsByName("hobbies");
+        if (x == "") {
+          alert("Please enter valid first name");
+        } else if (y == "") {
+          alert("Please enter valid last name");
+        } else if (!(gender[0].checked || gender[1].checked)) {
+          alert("Please select gender");
+        } else if (z == "null") {
+          alert("Please select a Country");
+        } else if (
+          !(hobbies[0].checked || hobbies[1].checked || hobbies[2].checked)
+        ) {
+          alert("Please select atleast one hobbies");
+        } else {
+          console.log("hello world");
+          document.getElementById("first-ans").innerHTML = "First Name :" + x;
+          document.getElementById("last-ans").innerHTML = "Last Name :" + y;
+          document.getElementById("country-ans").innerHTML = "Country :" + z;
+          document.getElementById("hobbies-ans").innerHTML = "hobbies :";
+          document.getElementById("gender-ans").innerHTML = "Gender : ";
+          if (gender[0].checked) {
+            var gendAns = document.getElementById("gender-ans").innerHTML;
+            document.getElementById("gender-ans").innerHTML =
+              gendAns + gender[0].value;
+          }
+          if (gender[1].checked) {
+            var gendAns = document.getElementById("gender-ans").innerHTML;
+            document.getElementById("gender-ans").innerHTML =
+              gendAns + gender[1].value;
+          }
+          if (hobbies[0].checked) {
+            var hobAns = document.getElementById("hobbies-ans").innerHTML;
+            document.getElementById("hobbies-ans").innerHTML =
+              hobAns + hobbies[0].value;
+          }
+          if (hobbies[1].checked) {
+            var hobAns =
+              document.getElementById("hobbies-ans").innerHTML +
+              " " +
+              hobbies[1].value;
+            document.getElementById("hobbies-ans").innerHTML = hobAns;
+          }
+          if (hobbies[2].checked) {
+            var hobAns =
+              document.getElementById("hobbies-ans").innerHTML +
+              " " +
+              hobbies[2].value;
+            document.getElementById("hobbies-ans").innerHTML = hobAns;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

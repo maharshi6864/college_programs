@@ -1,0 +1,98 @@
+<!-- Write a JavaScript that validates fields related to Employee Details as 
+Name, Age, Department, Designation, Salary, and No. Of Working 
+Days. 
+• Validate fields for blank values.
+ • Age must be greater than 18
+ • No. Of Working days >25, salary = 10000
+ • No of working days<25, salary=8000. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <form action="" onsubmit="validate(); return false;"> -->
+    <label for="name">Name : </label
+    ><input
+      type="text"
+      value="Maharshi"
+      id="name"
+      placeholder="Enter valid name"
+    />
+    <br /><br />
+    <label for="age">Age : </label
+    ><input
+      type="number"
+      name=""
+      value="18"
+      id="age"
+      placeholder="Enter age above 18 !"
+    />
+    <br /><br />
+    <label for="department">Department : </label>
+    <input
+      type="text"
+      name=""
+      id="department"
+      value="dep"
+      placeholder="sales,purchase...."
+    />
+    <br /><br />
+    <label for="designation">Designation : </label>
+    <input
+      type="text"
+      name=""
+      value="sales"
+      id="designation"
+      placeholder="executive,officer..."
+    />
+    <br /><br />
+    <label for="salary">Salary : </label
+    ><input type="number" name="" id="salary" placeholder="8000/10000" />
+    <br /><br />
+    <label for="workingdays">Working Days : </label
+    ><input type="number" name="" id="days" placeholder="1,2,3..." />
+    <br /><br />
+    <button type="button" onclick="validate()">Submit</button>
+    <!-- </form> -->
+    <div>
+      <p id="name-ans"></p>
+      <p id="age-ans"></p>
+      <p id="department-ans"></p>
+      <p id="designation-ans"></p>
+      <p id="salary-ans"></p>
+      <p id="workingdays-ans"></p>
+    </div>
+    <script>
+      function validate() {
+        var name = document.getElementById("name");
+        var age = document.getElementById("age");
+        var salary = document.getElementById("salary");
+        var workingdays = document.getElementById("days");
+
+        if (
+          name.value == "" ||
+          age.value == "" ||
+          salary.value == "" ||
+          workingdays.value == "" ||
+          department.value == "" ||
+          designation.value == ""
+        ) {
+          alert("Please enter all the details");
+        } else if (age.value < 18) {
+          alert("Age must be greater than 18");
+        } else if (
+          (workingdays.value < 25 && salary.value == 10000) ||
+          (workingdays.value > 25 && salary.value == 8000)
+        ) {
+          alert("please Enter valid working salary for number of working days");
+        } else {
+          alert("Details are valid");
+        }
+      }
+    </script>
+  </body>
+</html>

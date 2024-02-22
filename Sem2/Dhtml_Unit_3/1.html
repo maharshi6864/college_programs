@@ -1,0 +1,32 @@
+<!-- Create a webpage which has select field.
+When you change the option , the selected option is displayed in the
+same page -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Question 1</title>
+  </head>
+  <body>
+    <select id="q1" onchange="validateForm()">
+      <option value="null">please select an option</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <p id="answer"></p>
+    <script>
+      function validateForm() {
+        var x = document.getElementById("q1").value;
+        if (x == "null") {
+          document.getElementById("answer").innerHTML = "";
+          alert("Please select an option");
+        } else {
+          document.getElementById("answer").innerHTML = x;
+        }
+      }
+    </script>
+  </body>
+</html>

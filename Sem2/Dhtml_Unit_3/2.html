@@ -1,0 +1,39 @@
+<!-- Create a webpage whih has following field.
+When you subscribe it, the information which is entered in the textbox,
+is displayed on the same page. The text should be in bold. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Question 2</title>
+  </head>
+  <body>
+    <h1>SUBSCRIBE TO OUR MAILING LIST</h1>
+    <label for="email-address">Email Address</label>
+    <input type="text" name="" id="email-address" />
+    <br /><br />
+    <label for="email-address">First Name</label>
+    <input type="text" name="" id="first-name" />
+    <br /><br />
+    <label for="email-address">Last Name</label>
+    <input type="text" name="" id="last-name" />
+    <br /><br />
+    <button type="button" onclick="validate()">Submit</button>
+    <p id="email-ans"></p>
+    <p id="first-ans"></p>
+    <p id="last-ans"></p>
+    <script>
+      function validate() {
+        var x = document.getElementById("email-address").value;
+        var y = document.getElementById("first-name").value;
+        var z = document.getElementById("last-name").value;
+        if (x == "" || y == "" || z == "") {
+          alert("Please enter all the details");
+        } else {
+          document.getElementById("email-ans").innerHTML = x;
+          document.getElementById("first-ans").innerHTML = y;
+          document.getElementById("last-ans").innerHTML = z;
+        }
+      }
+    </script>
+  </body>
+</html>
