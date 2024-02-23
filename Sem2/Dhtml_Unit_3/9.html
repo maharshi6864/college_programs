@@ -1,0 +1,110 @@
+<!-- Create a JavaScript that accepts Student Details as Name, Semester, 
+Marks of three subjects. 
+• Validate marks field to contain numbers only. 
+• Name contains only character.
+ • Calculate total and average to display results properly. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" onsubmit="validate(); return false;">
+      <label for="name">Student Name : </label
+      ><input type="text" name="" id="name" placeholder="Enter valid name" />
+      <br /><br />
+      <label for="semester">Semsester : </label
+      ><input
+        type="text"
+        name=""
+        id="semester"
+        placeholder="Enter valid semester"
+      />
+      <br /><br />
+      <label for="marks1">Marks 1 : </label>
+      <input
+        type="number"
+        name=""
+        id="marks1"
+        placeholder="Enter marks out of 100"
+      />
+      <br /><br />
+      <label for="marks2">Marks 2 : </label>
+      <input
+        type="number"
+        name=""
+        id="marks2"
+        placeholder="Enter marks out of 100"
+      />
+      <br /><br />
+      <label for="marks3">Marks 3 :</label>
+      <input
+        type="number"
+        name=""
+        id="marks3"
+        placeholder="Enter marks out of 100"
+      />
+      <br /><br />
+      <button type="submit">Submit</button>
+    </form>
+    <div>
+      <p id="name-ans"></p>
+      <p id="semester-ans"></p>
+      <p id="marks1-ans"></p>
+      <p id="marks2-ans"></p>
+      <p id="marks3-ans"></p>
+      <p id="total"></p>
+      <p id="average"></p>
+    </div>
+    <script>
+      function validate() {
+        var name = document.getElementById("name").value;
+        var semester = document.getElementById("semester").value;
+        var marks1 = parseInt(document.getElementById("marks1").value);
+        var marks2 = parseInt(document.getElementById("marks2").value);
+        var marks3 = parseInt(document.getElementById("marks3").value);
+
+        if (name == "") {
+          alert("Please enter a name");
+        } else if (semester == "") {
+          alert("Please enter a semester");
+        } else if (
+          marks1 == "" ||
+          marks2 == "" ||
+          marks3 == "" ||
+          marks1 < 0 ||
+          marks1 > 100 ||
+          marks2 < 0 ||
+          marks2 > 100 ||
+          marks3 < 0 ||
+          marks3 > 100
+        ) {
+          alert("Enter valid marks ");
+        } else {
+          document.getElementById("name-ans").innerHTML = `Name : ${name}`;
+          document.getElementById(
+            "semester-ans"
+          ).innerHTML = `Semester : ${semester}`;
+          document.getElementById(
+            "marks1-ans"
+          ).innerHTML = `Marks1 : ${marks1}`;
+          document.getElementById(
+            "marks2-ans"
+          ).innerHTML = `Marks2 : ${marks2}`;
+          document.getElementById(
+            "marks3-ans"
+          ).innerHTML = `Marks3 : ${marks3}`;
+          document.getElementById("total").innerHTML = `Total :  ${
+            marks1 + marks2 + marks3
+          }`;
+          document.getElementById("average").innerHTML = `Average : ${
+            (marks1 + marks2 + marks3) / 3
+          }`;
+        }
+      }
+    </script>
+  </body>
+</html>
