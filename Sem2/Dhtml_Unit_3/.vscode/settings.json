@@ -1,3 +1,5 @@
 {
-  "transparent-win.transparency": 0.2
+  "transparent-win.transparency": 0.2,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth"
 }
