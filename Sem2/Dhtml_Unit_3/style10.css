@@ -31,8 +31,9 @@ body,html{
 }
 
 table{
-  min-width: 100%;
-  /* border: 1  px solid black; */
+  width: 60%;
+  height: 100%;
+  border-collapse: collapse; 
 }
 
 table button{
@@ -59,7 +60,6 @@ table textarea{
 
 table input[type="text"],input[type="number"],select{
  padding: 5px;
- /* min-width: 175px; */
 }
 
 td{

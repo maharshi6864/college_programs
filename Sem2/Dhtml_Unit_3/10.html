@@ -20,8 +20,8 @@
   <body>
     <div class="conatiner">
       <div class="form-box">
-        <form action="">
-          <table>
+        <table>
+          <form action="" onsubmit="return validate()">
             <tr>
               <td><label for="name">Name : </label></td>
               <td>
@@ -101,9 +101,57 @@
                 <button type="submit">Register</button>
               </td>
             </tr>
-          </table>
-        </form>
+          </form>
+        </table>
       </div>
     </div>
+    <script>
+      function validate() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var phone = document.getElementById("phone").value;
+        var gender = document.getElementsByName("gender");
+        var language = document.getElementById("language").value;
+        var zipcode = document.getElementById("zipcode").value;
+        var about = document.getElementById("about").value;
+        console.log();
+        if (
+          name == "" ||
+          email == "" ||
+          password == "" ||
+          phone == "" ||
+          (!gender[0].checked && !gender[1].checked && !gender[2].checked) ||
+          language == "" ||
+          zipcode == "" ||
+          about == ""
+        ) {
+          alert("Please enter valid response");
+          return false;
+        } else if (name.length < 6) {
+          alert("Please enter valid name");
+          return false;
+        } else if (
+          email.length - email.lastIndexOf(".") < 3 ||
+          email.indexOf("@") < 1 ||
+          email.lastIndexOf(".") < email.lastIndexOf("@") + 2
+        ) {
+          alert("Please enter valid email address !");
+          return false;
+        } else if (password.length < 10) {
+          alert("Please enter valid password !");
+          return false;
+        } else if (phone.length < 10) {
+          alert("please enter valid phone number !");
+          return false;
+        } else if (zipcode.length != 6) {
+          alert("Please enter valid zipcode !");
+          return false;
+        } else {
+          alert("valid response");
+          return true;
+        }
+      }
+    </script>
   </body>
 </html>
