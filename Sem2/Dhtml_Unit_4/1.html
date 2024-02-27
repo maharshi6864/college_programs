@@ -1,0 +1,120 @@
+<!-- Do following validations :
+1. All the fields are required.
+ 2. First Name & Last Name contains only alphabets.
+ 3. Email should be validated by “@” & “.” sign.
+ 4. Phone number should be of 10 digits.
+ 5. Password & Confirm Password should be same.
+ 6. When the Form is submitted, all the User information is 
+displayed on the same page -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <form action="" onsubmit="validate()">
+          <table>
+            <tr>
+              <td
+                style="background-color: #e88800; text-align: start"
+                colspan="2"
+              >
+                Sign Up
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="firstname">First Name</label>
+              </td>
+              <td class="input-class">
+                <input type="text" name="" id="firstname" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="lastname"> Last Name </label>
+              </td>
+              <td class="input-class">
+                <input type="text" name="" id="lastname" />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="screen-name">Screen Name </label></td>
+              <td class="input-class">
+                <input type="text" name="" id="screen-name" />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="date-of-b"> Date Of Birth </label></td>
+              <td class="input-class"><input type="date" name="" id="" /></td>
+            </tr>
+            <tr>
+              <td><label for="gender">Gender</label></td>
+              <td class="input-class">
+                <input type="radio" name="gender" id="male" /><label for="male"
+                  >Male</label
+                ><input type="radio" name="gender" id="female" /><label
+                  for="female"
+                  >Female</label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><label for="country">Country</label></td>
+              <td class="input-class">
+                <select name="" id="country">
+                  <option value="usa">USA</option>
+                  <option value="india">India</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="email">Email</label></td>
+              <td class="input-class">
+                <input type="email" name="" id="email" />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="phone">Phone</label></td>
+              <td class="input-class">
+                <input type="number" name="" id="phone" />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="password">Password</label></td>
+              <td class="input-class">
+                <input type="password" name="" id="password" />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="confirm">Confirm Password</label></td>
+              <td class="input-class">
+                <input type="password" name="" id="confirm" />
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="input-class">
+                <input type="checkbox" name="" id="term" /><label for="term"
+                  >i agree to the terms of Use</label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="last-row">
+                <button type="submit">Submit</button>
+                <button type="reset">Cancel</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
