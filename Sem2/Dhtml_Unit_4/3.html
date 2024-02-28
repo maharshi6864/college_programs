@@ -1,0 +1,58 @@
+<!-- Create a webpage of “GLS University”. 
+Do the following validation :
+1. When the user hover the logo of the university , the image height
+ & width should be increased.
+ 2. When the user clicks or releases on the content, the text color 
+should be changed.
+ 3. When the user moves the cursor in the div, the X & Y axis 
+4. should be displayed on the same page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 3</title>
+  </head>
+  <body>
+    <img
+      style="height: 200px; width: 400px"
+      src="logo.jpg"
+      alt=""
+      onmouseover="increaseSize(this)"
+      onmouseout="backToNormal(this)"
+    />
+    <h2 onclick="changeColor(this)">GLS University</h2>
+    <div
+      onmousemove="getLocation(event)"
+      onmouseout="backToNormal1()"
+      style="border: 1px solid black; height: 300px; width: 650px"
+    ></div>
+    <p id="ans"></p>
+    <script>
+      function increaseSize(img) {
+        img.style.width = "800px";
+        img.style.height = "400px";
+      }
+
+      function backToNormal(img) {
+        img.style.width = "400px";
+        img.style.height = "200px";
+      }
+
+      function changeColor(h) {
+        h.style.color = "red";
+      }
+
+      function getLocation(x) {
+        document.getElementById(
+          "ans"
+        ).innerHTML = `x Axis: ${x.clientX}px y Axis: ${x.clientY}px`;
+      }
+
+      function backToNormal1(el) {
+        document.getElementById("ans").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

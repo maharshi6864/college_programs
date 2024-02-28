@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 10</title>
+    <style>
+      #myDiv {
+        width: 200px;
+        height: 100px;
+        background-color: blue;
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv"></div>
+
+    <script>
+      var div = document.getElementById("myDiv");
+
+      div.addEventListener("mouseenter", function () {
+        div.style.transform = "scale(1.5) rotate(300deg)";
+      });
+
+      div.addEventListener("mouseleave", function () {
+        div.style.transform = "scale(1) rotate(0deg)";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="800"
+      height="400"
+      style="border: 1px solid #c3c3c3"
+    >
+      Your browser does not support the canvas element.
+    </canvas>
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      // var ctx = canvas.getContext("2d");
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(290, 200, 150, 0, 2 * Math.PI);
+      ctx.fillStyle = "yellow";
+      ctx.fill();
+      // ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(220, 150, 20, 0, 2 * Math.PI);
+      ctx.fillStyle = "black";
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(370, 150, 20, 0, 2 * Math.PI);
+      ctx.fillStyle = "black";
+      ctx.fill();
+      ctx.stroke();
+      // ctx2.stroke();
+
+      ctx.beginPath();
+      ctx.arc(290, 210, 100, 0, 1 * Math.PI);
+      ctx.lineWidth = 5;
+      ctx.strokeStyle = "red";
+      ctx.stroke();
+    </script>
+  </body>
+</html>

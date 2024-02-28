@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 11</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+        background-color: red;
+        position: absolute;
+        top: 400px;
+        left: 300px;
+      }
+
+      @keyframes changeColor {
+        0% {
+          background-color: red;
+          top: 400px;
+          left: 300px;
+        }
+
+        25% {
+          background-color: green;
+          top: 400px;
+          left: 600px;
+        }
+
+        50% {
+          background-color: blue;
+          top: 200px;
+          left: 130px;
+        }
+
+        75% {
+          background-color: cyan;
+          top: 400px;
+          left: 50px;
+        }
+        100% {
+          background-color: red;
+          top: 400px;
+          left: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body onload="changeColor()">
+    <div id="d"></div>
+
+    <script>
+      function changeColor() {
+        document.getElementById("d").style.animation =
+          "changeColor 15s infinite linear alternate-reverse";
+      }
+    </script>
+  </body>
+</html>

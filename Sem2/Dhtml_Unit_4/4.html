@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Question 4</title>
+  </head>
+  <body>
+    <!-- <form action="" onsubmit="validate(); return false;"> -->
+    <table>
+      <tr>
+        <td><label for="username">Username: </label></td>
+        <td>
+          <input
+            type="text"
+            name=""
+            id="username"
+            onselect="changeColor(this)"
+            onblur="changeBackColor(this)"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="password">Password</label></td>
+        <td><input type="text" name="" id="password" /></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="coe"
+            >City of <br />
+            Employment</label
+          >
+        </td>
+        <td><input type="text" name="" id="coe" /></td>
+      </tr>
+      <tr>
+        <td><label for="web-server">Web server</label></td>
+        <td>
+          <select name="" id="web-server" onchange="selectChange(this)">
+            <option value="">--Choose a server--</option>
+            <option value="server_1">Server 1</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="">Please specify <br />your role</label>
+        </td>
+        <td>
+          <input type="radio" name="role" id="admin" value="admin" />
+          <label for="admin">Admin</label><br />
+          <input type="radio" name="role" id="engineer" value="engineer" />
+          <label for="engineer">Engineer</label><br />
+          <input type="radio" name="role" id="manager" value="manager" />
+          <label for="manager">Manager</label><br />
+          <input type="radio" name="role" id="guest" value="guest" />
+          <label for="guest">Guest</label><br />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Single Sign-on <br />
+          to the following
+        </td>
+        <td>
+          <input type="checkbox" name="sign" id="mail" value="mail" /><label
+            for="mail"
+            >Mail</label
+          ><br />
+          <input
+            type="checkbox"
+            name="sign"
+            id="payroll"
+            value="payroll"
+          /><label for="payroll">Payroll</label><br />
+          <input
+            type="checkbox"
+            name="sign"
+            id="self-service"
+            value="self-service"
+          /><label for="self-service">Self-service</label><br />
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button type="submit" onclick="validate()">Login</button
+          ><button type="button" onclick="resetForm()">Reset</button>
+        </td>
+      </tr>
+    </table>
+    <!-- </form> -->
+    <p id="ans"></p>
+    <script>
+      function validate() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var coe = document.getElementById("coe").value;
+        var web_server = document.getElementById("web-server").value;
+        var role = document.getElementsByName("role");
+        var sign = document.getElementsByName("sign");
+
+        if (
+          username == "" ||
+          password == "" ||
+          coe == "" ||
+          web_server == "" ||
+          (!role[0].checked &&
+            !role[1].checked &&
+            !role[2].checked &&
+            !role[3].checked) ||
+          (!sign[0].checked && !sign[1].checked && !sign[2].checked)
+        ) {
+          alert("Please fill all the fields!!");
+        } else {
+          let roleans = "";
+          if (role[0].checked) {
+            roleans = role[0].value;
+          } else if (role[1].checked) {
+            roleans = role[1].value;
+          } else if (role[2].checked) {
+            roleans = role[2].value;
+          } else if (role[3].checked) {
+            roleans = role[3].value;
+          }
+
+          let signans = "";
+          if (sign[0].checked) {
+            signans = sign[0].value;
+          }
+          if (sign[1].checked) {
+            signans = signans + `  ${sign[1].value}`;
+          }
+          if (sign[2].checked) {
+            signans = signans + `  ${sign[2].value}`;
+          }
+
+          document.getElementById(
+            "ans"
+          ).innerHTML = `Username: ${username} <br> <br>Password: ${password}<br><br>City Of Employment: ${coe} <br><br> Web server : ${web_server} <br><br> Please specify <br />your role : ${roleans} <br><br> Single Sign-on <br />
+            to the following : ${signans}`;
+        }
+      }
+
+      function selectChange(x) {
+        alert(`you have selected ${x.value}`);
+      }
+
+      function resetForm() {
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("coe").value = "";
+        document.getElementById("web-server").value = "";
+        var role = document.getElementsByName("role");
+        var sign = document.getElementsByName("sign");
+        role[0].checked = false;
+        role[1].checked = false;
+        role[2].checked = false;
+        role[3].checked = false;
+
+        sign[0].checked = false;
+        sign[1].checked = false;
+        sign[2].checked = false;
+      }
+
+      function changeColor(x) {
+        x.style.backgroundColor = "yellow";
+      }
+
+      function changeBackColor(x) {
+        x.style.backgroundColor = "";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 11</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+        background-color: red;
+      }
+
+      @keyframes changeColor {
+        0% {
+          background-color: red;
+        }
+
+        25% {
+          background-color: green;
+        }
+
+        50% {
+          background-color: blue;
+        }
+
+        75% {
+          background-color: cyan;
+        }
+        100% {
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body onload="changeColor()">
+    <div id="d"></div>
+
+    <script>
+      function changeColor(d) {
+        document.getElementById("d").style.animation = "changeColor 10s";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Question 2</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      .container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* padding: 20px; */
+      }
+
+      input {
+        margin: 10px 0px;
+        padding: 10px;
+        width: 100%;
+      }
+
+      button {
+        width: 110%;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: #3191de;
+        border: none;
+        color: #fff;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" onsubmit="return validate()">
+        <h1>Login</h1>
+        <input
+          type="text"
+          name=""
+          id="username"
+          onclick="changeColor(this)"
+          onblur="backToColor(this); "
+          placeholder="Username"
+        />
+        <input
+          type="text"
+          name=""
+          id="password"
+          onclick="changeColor(this)"
+          onblur="backToColor(this); alert('Click Login Button'); "
+          placeholder="Password"
+        />
+        <button type="submit">Log in</button>
+      </form>
+    </div>
+    <script>
+      function changeColor(x) {
+        x.style.backgroundColor = "Yellow";
+      }
+
+      function backToColor(x) {
+        x.style.backgroundColor = "#ffffff";
+      }
+
+      function validate() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username == "") {
+          alert("Please Enter Username!!");
+          return false;
+        } else if (password == "") {
+          alert("Please Enter password!!");
+          return false;
+        } else {
+          alert("Login Success");
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>
