@@ -15,16 +15,17 @@
   </head>
   <body>
     <div id="myDiv"></div>
-
     <script>
       var div = document.getElementById("myDiv");
 
-      div.addEventListener("mouseenter", function () {
-        div.style.transform = "scale(1.5) rotate(300deg)";
+      div.addEventListener("mouseover", function () {
+        div.style.transform = "scale(2) rotate(300deg)";
+        div.style.margin = "200px";
       });
 
-      div.addEventListener("mouseleave", function () {
+      div.addEventListener("mouseout", function () {
         div.style.transform = "scale(1) rotate(0deg)";
+        div.style.margin = "0px";
       });
     </script>
   </body>

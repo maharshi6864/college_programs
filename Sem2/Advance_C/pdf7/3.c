@@ -29,7 +29,7 @@ int main()
   printf("Enter number of more elements you want to enter : ");
   scanf("%d", &nn);
 
-  arr = (int *)realloc(arr, sizeof(arr) + (2 * sizeof(int)));
+  arr = (int *)realloc(arr, sizeof(arr) + (nn * sizeof(int)));
 
   for (int i = sizeOfArray; i < nn + sizeOfArray; i++)
   {

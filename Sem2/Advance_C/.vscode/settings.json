@@ -1,7 +1,7 @@
 {
   "files.associations": {
     "*.jsx": "javascriptreact",
-    "string.h": "c"
-  },
-  "liveServer.settings.port": 5502
+    "4.C": "cpp",
+    "9.C": "cpp"
+  }
 }

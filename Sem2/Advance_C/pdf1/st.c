@@ -14,7 +14,7 @@ int main()
     printf("enter columns:");
     scanf("%d", &c);
 
-    printf("enter value for matrix 1");
+    printf("enter value for matrix 1\n");
     for (i = 0; i < r; i++)
     {
         for (j = 0; j < c; j++)
@@ -24,7 +24,7 @@ int main()
         }
     }
 
-    printf("enter value for matrix 2");
+    printf("enter value for matrix 2\n");
     for (i = 0; i < r; i++)
     {
         for (j = 0; j < c; j++)

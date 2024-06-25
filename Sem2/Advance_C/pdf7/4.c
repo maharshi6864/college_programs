@@ -50,4 +50,6 @@ int main()
   five->next = NULL;
 
   printLinkList(one);
+
+  
 }
