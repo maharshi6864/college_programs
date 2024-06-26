@@ -43,7 +43,7 @@ int main()
   }
 
   // less than operator
-  if (a < b)
+  if (a <= b)
   {
     cout << "b is greater than or equal to a\n";
   }
