@@ -22,7 +22,7 @@ int main()
 
   if (a == b || a == c)
   {
-    cout << "\n\neither a is equal to b or c is equal to.";
+    cout << "\n\neither a is equal to b or c is equal to a.";
   }
 
   if (!(a == b))
