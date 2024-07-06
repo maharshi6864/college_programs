@@ -1,0 +1,22 @@
+1. Display the current system date and time.
+
+command:
+date
+
+
+2. Access the manual pages for the ls command.
+
+command:
+man ls
+
+3. Delete the test_dir created in Question 2, assuming it is empty.
+
+command:
+rmdir test_dir
+
+//the above command is to delete the directory when it is empty
+
+command :
+rm -r test_dir
+
+//the above command is to delete the direcory when it is not empty.

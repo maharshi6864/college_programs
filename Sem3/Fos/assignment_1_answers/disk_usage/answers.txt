@@ -1,0 +1,70 @@
+1. Display the disk usage of the current directory (.).
+
+command:
+du -h --max-depth=1 .
+
+Instructions:
+To display the disk usage of the current directory (.) in Ubuntu, you can use the du command. Here's how you can do it:
+
+bash
+
+du -h --max-depth=1 .
+
+Explanation of the command:
+
+    du: Stands for disk usage.
+    -h: Human-readable output (e.g., in KB, MB, GB).
+    --max-depth=1: Limits the depth of the directory hierarchy to 1 level, meaning it will only show the disk usage of the current directory and its immediate subdirectories.
+    .: Specifies the current directory (.).
+
+Output:
+
+Running this command will output the disk usage summary of the current directory in a human-readable format. It will list sizes of files and directories within the current directory, along with a total for all listed items.
+Example Output:
+
+mathematica
+
+12K     ./subdir1
+36K     ./subdir2
+48K     .
+
+This example output indicates that the total disk usage of the current directory (.) is 48 KB, with breakdowns for subdir1 and subdir2.
+
+Using du with these options provides a quick summary of disk space usage within the current directory, making it useful for checking storage usage on Linux systems.
+
+2. View the available disk space on all partitions in the system.
+
+command:
+df -h
+
+
+instructions:
+To view the available disk space on all partitions in the system in Ubuntu, you can use the df command. Here’s how you can do it:
+
+bash
+
+df -h
+
+Explanation of the command:
+
+    df: Stands for disk free and is used to display information about available disk space on file systems.
+    -h: Human-readable output (e.g., in KB, MB, GB).
+
+Output:
+
+Running df -h will list information about all mounted partitions along with their sizes, used space, available space, and utilization percentage. Here's an example of what the output might look like:
+
+javascript
+
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        20G   10G   8G   55% /
+/dev/sdb1       100G   50G  50G   50% /mnt/data
+
+Explanation of the output fields:
+
+    Filesystem: The device or partition name.
+    Size: Total size of the file system.
+    Used: Amount of space used.
+    Avail: Available space.
+    Use%: Percentage of used space.
+    Mounted on: The mount point of the file system.

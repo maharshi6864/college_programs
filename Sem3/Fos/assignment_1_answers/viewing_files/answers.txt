@@ -1,0 +1,55 @@
+
+Viewing Files:
+1. Page through the contents of a large text file large_file.txt, viewing one screenful at a time.
+command:
+more random.txt
+
+2. View the contents of large_file.txt, allowing both forward and backward movement.
+
+Command:
+less random.txt
+
+Instructions:
+Navigating within less:
+
+    Forward Movement:
+        Use the arrow keys or the Page Up (Ctrl + B) and Page Down (Ctrl + F) keys to scroll forward through the file.
+        You can also press the spacebar to move forward one page at a time.
+
+    Backward Movement:
+        Press the b key to scroll backwards one page at a time.
+        Use the up arrow (k in some versions of less) to move up line by line.
+
+    
+3. Display the first 10 lines of large_file.txt.
+
+command:
+head -n 10 large_file.txt
+
+instructions:
+Using head command:
+
+The head command is straightforward and specifically designed to display the beginning of files.
+
+bash
+
+head -n 10 large_file.txt
+
+    -n 10: Specifies to output the first 10 lines of the file.
+
+
+4. Display the last 10 lines of large_file.txt.
+
+command:
+tail -n 10 random.txt
+
+instruction:
+Using tail command:
+
+The tail command is commonly used to display the last part of files.
+
+bash
+
+tail -n 10 large_file.txt
+
+    -n 10: Specifies to output the last 10 lines of the file.
