@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+	
+<!DOCTYPE student SYSTEM "q-1.dtd">
+
+<student>
+	<roll_no>69</roll_no>
+	<name>maharshi patel</name>
+	<address>navrangpura</address>
+	<mobile>635126412789812</mobile>
+	<dob>13/09/2004</dob>
+	<age>19</age>
+	<qualification></qualification>
+</student>
+	

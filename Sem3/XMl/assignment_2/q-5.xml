@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+	<!DOCTYPE books SYSTEM "q-5.dtd">
+	
+	<books>
+		<book title="XML"></book>
+		<author></author>
+		<year></year>
+		<publisher></publisher>
+	</books>
