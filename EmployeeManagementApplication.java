@@ -1,7 +1,43 @@
+import java.util.Scanner;
+
 public class EmployeeManagementApplication {
 
   public static void main(String[] args) {
-    SalaryEmployee emp1 = new SalaryEmployee();
+    int numberOfEmployees = 0;
+    Scanner scan = new Scanner(System.in);
+    System.out.println("How many employees to create ? ");
+    try {
+      scan.nextInt(numberOfEmployees);
+    } catch (Exception e) {
+      System.out.println("You have entered invalid number of employees.");
+    }
+    Employee[] employeeArray = new Employee[numberOfEmployees];
+    for (int i = 0; i < employeeArray.length; i++) {
+      System.out.println("Enter data for employee " + i + " of " + numberOfEmployees);
+      System.out.println("Choose type of employee to add.");
+      System.out.println("1.Salaried");
+      System.out.println("2.Hourly");
+      System.out.println("3.Commission : ");
+      int choice = 0;
+      try {
+        scan.nextInt(choice);
+      } catch (Exception e) {
+        System.out.println("You have entered an invalid choice.");
+      }
+      boolean validId = true;
+      while (validId) {
+        
+        try {
+          scan.nextInt(choice);
+        } catch (Exception e) {
+          System.out.println("You have entered an invalid choice.");
+        }
+      }
+    }
+
+  }
+
+  void takeUserInput() {
 
   }
 }
