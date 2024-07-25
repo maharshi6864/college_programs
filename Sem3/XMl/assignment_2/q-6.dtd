@@ -1,0 +1,13 @@
+<!ELEMENT student (name,id,plan)>
+<!ELEMENT name (fname,lname)>
+<!ELEMENT fname (#PCDATA)>
+<!ELEMENT lname (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT plan ((course)*)>
+<!ELEMENT course (coursename,shortname,(record)*)>
+<!ELEMENT coursename (#PCDATA)>
+<!ELEMENT shortname (#PCDATA)>
+<!ELEMENT record (grade,date)>
+<!ELEMENT grade (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ATTLIST course year CDATA #REQUIRED>

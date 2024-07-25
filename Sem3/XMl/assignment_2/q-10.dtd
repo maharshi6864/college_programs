@@ -1,0 +1,10 @@
+<!ELEMENT student_info ((student)+,course,subject)>
+<!ELEMENT student (sname,contact_no)>
+<!ATTLIST student which_course CDATA #IMPLIED>
+<!ELEMENT course (cname)>
+<!ATTLIST course c_id CDATA #IMPLIED>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT sname (#PCDATA)>
+<!ELEMENT contact_no (#PCDATA)>
+<!ELEMENT cname (#PCDATA)>
+

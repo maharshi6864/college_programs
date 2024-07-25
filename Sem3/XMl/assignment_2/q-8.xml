@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+	<!DOCTYPE student SYSTEM "q-8.dtd">
+	<student>
+		<roll_no></roll_no>
+		<name></name>
+		<marks>
+				<web_technologies></web_technologies>
+				<xml></xml>
+				<J2EE></J2EE>
+				<NS></NS>
+		</marks>
+		<rank></rank>
+	</student>
+	
