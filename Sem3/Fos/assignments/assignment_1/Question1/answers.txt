@@ -1,0 +1,21 @@
+Q-1 How To show the hidden files in the ubuntu os 
+This command might not work on ubuntu installed in window os.
+command:
+  ls -a
+
+Q-2 How to delete directory with files in installed
+
+command:
+  rm -r test_dir
+
+Q-3 Explain two functionality of “mv” command with example?
+
+Using mv command we can rename the directory as well file name AND also we can change the file location
+or folder location to another location
+
+command:
+  //To rename a file
+  mv <FILE NAME (OR) FOLDER NAME> <NEW NAME>
+  //To move the file location
+  //remember while changing the file location a dot is essential and if not the full location is required.
+  mv <FILE NAME (OR) FOLDER NAME> <target location>

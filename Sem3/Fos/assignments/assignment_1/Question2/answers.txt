@@ -1,0 +1,20 @@
+i. User name,
+command: 
+  whoami
+ii. Users home directory.
+command:(Case sensitive)
+  echo $HOME
+iii. Terminal name
+command:
+  tty
+iv. Terminal type.
+command:
+  echo $TERM
+v. Machine name
+command:
+//Just will give the machine name
+  hostname
+//Will give you full detail of the machine
+  hostnamectl
+
+

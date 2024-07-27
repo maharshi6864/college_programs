@@ -1,0 +1,6 @@
+Q-2 to know the unix version we have use
+
+command : 
+  uname -r
+  uname -l
+  lsb_release -a
