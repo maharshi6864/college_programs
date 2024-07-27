@@ -1,10 +1,17 @@
-<!ELEMENT student_info ((student)+,course,subject)>
-<!ELEMENT student (sname,contact_no)>
-<!ATTLIST student which_course CDATA #IMPLIED>
-<!ELEMENT course (cname)>
-<!ATTLIST course c_id CDATA #IMPLIED>
-<!ELEMENT subject (#PCDATA)>
-<!ELEMENT sname (#PCDATA)>
-<!ELEMENT contact_no (#PCDATA)>
-<!ELEMENT cname (#PCDATA)>
+<!ELEMENT Student_info (Course, Student*)>
+<!ELEMENT Course (subject+)>
+<!ATTLIST Course
+    c_id ID #REQUIRED
+    name CDATA #REQUIRED>
+<!ELEMENT subject EMPTY>
+<!ATTLIST subject
+    name (Java | XML | OS) #REQUIRED>
+<!ELEMENT Student EMPTY>
+<!ATTLIST Student
+    which_course IDREF #REQUIRED
+    name CDATA #REQUIRED
+    contact_no NMTOKEN #REQUIRED>
+    
+<!-- Entity declaration -->
+<!ENTITY % university_entity "XYZ University">
 
