@@ -1,14 +1,14 @@
 #!/bin/bash
-
+#to install bc use command : sudo apt-get install bc
 # Prompt the user to enter the basic salary
 echo "Enter the basic salary:"
 read BASIC
 
 # Calculate the components
-DA=$(echo "0.60 * $BASIC" | bc)
-HRA=$(echo "0.20 * $BASIC" | bc)
+DA=$(echo "scale=2; 0.60 * $BASIC" | bc)
+HRA=$(echo "scale=2; 0.20 * $BASIC" | bc)
 MA=100
-IT=$(echo "0.15 * $BASIC" | bc)
+IT=$(echo "scale=2; 0.15 * $BASIC" | bc)
 
 # Calculate the gross salary
 GROSS_SALARY=$(echo "$BASIC + $DA + $HRA + $MA - $IT" | bc)
