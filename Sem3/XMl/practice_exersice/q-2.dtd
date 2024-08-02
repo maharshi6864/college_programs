@@ -1,0 +1,20 @@
+<!ELEMENT employee (employee_name,personal_info,salary,designation)>
+
+<!ELEMENT employee_name (#PCDATA)>
+
+<!ELEMENT personal_info (address,birthdate,gender,mobile_no)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT birthdate (#PCDATA)>
+<!ELEMENT gender (male|female)>
+<!ELEMENT male (#PCDATA)>
+<!ELEMENT female (#PCDATA)>
+<!ELEMENT mobile_no (#PCDATA)>
+
+<!ELEMENT salary (net_salary,gross_salary,HRA,DA)>
+<!ELEMENT net_salary (#PCDATA)>
+<!ELEMENT gross_salary (#PCDATA)>
+<!ELEMENT HRA (#PCDATA)>
+<!ELEMENT DA (#PCDATA)>
+
+<!ELEMENT designation (#PCDATA)>
+<!ATTLIST designation post (Manager|Technical|Consultant|Executive|HR) #REQUIRED>
