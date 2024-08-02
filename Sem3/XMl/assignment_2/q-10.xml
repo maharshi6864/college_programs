@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE Student_info SYSTEM "q-10.dtd">
-<Student_info>
-    <Course c_id="C001" name="Computer Science">
-        <subject name="Java"/>
-        <subject name="XML"/>
-        <subject name="OS"/>
-    </Course>
-    
-    <Student which_course="C001" name="John Doe" contact_no="1234567890"/>
-    <Student which_course="C001" name="Jane Smith" contact_no="9876543210"/>
-    
-  	
-</Student_info>
-
+<?xml version="1.0"?>
+<!DOCTYPE student_info SYSTEM "q-10.dtd">
+<student_info>
+    <student which_course="C_101" contact_no="1212121">
+        <name>&stud_name;</name>
+    </student>
+    <course c_id="C_101">
+        <name>jhdfv</name>
+    </course>
+    <subject name="Java"> </subject>
+</student_info>
