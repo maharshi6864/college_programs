@@ -8,7 +8,7 @@ inline int cubeOfNumber(int n)
 {
   return n * n * n;
 }
-
+// In inline function there must be a return data type. void is not acceptable.
 int main()
 {
   int number = 0;
