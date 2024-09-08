@@ -1,3 +1,0 @@
-name : Maharshi Patel
-age : 19
-address : friends PG
