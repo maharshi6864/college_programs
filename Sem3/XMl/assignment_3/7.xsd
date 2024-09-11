@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xsd:element name="item">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="name" type="xsd:string"></xsd:element>
+				<xsd:element name="category">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="veg">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="chips"></xsd:enumeration>
+										<xsd:enumeration value="biscuits" ></xsd:enumeration>
+										<xsd:enumeration value="salad"></xsd:enumeration>
+										<xsd:enumeration value="bread"></xsd:enumeration>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="nonVeg" type="xsd:string" ></xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="companyInfo">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="phoneNo"></xsd:element>
+							<xsd:element name="address"></xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
