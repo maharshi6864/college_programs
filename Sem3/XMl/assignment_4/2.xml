@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<orderDetails>
+	<orderNumber>#1223456</orderNumber>
+	<orderDate>20/09/2024</orderDate>
+	<orderAmount>20,000</orderAmount>
+	<itemPrice>10,000</itemPrice>
+	<itemName>Soap</itemName>
+	<quantity>2</quantity>
+</orderDetails>

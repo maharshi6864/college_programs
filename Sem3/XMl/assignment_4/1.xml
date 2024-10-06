@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<emp_info>
+  <employee>
+  	<emp_name emp_id="121">
+    <firstName>Maharshi</firstName>
+    <lastName>patel</lastName>
+  </emp_name>
+  </employee>
+</emp_info>

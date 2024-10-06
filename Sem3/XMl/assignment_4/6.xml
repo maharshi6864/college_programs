@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<students>
+	<student>
+		<name fname="Maharshi" lname="Patel">
+		</name>
+		<id>121212</id>
+		<plan>
+			<course>iMscIT</course>
+		</plan>
+	</student>
+	
+	<student>
+		<name fname="Maharshi" lname="Patel">
+		</name>
+		<id>121212</id>
+		<plan>
+			<course>iMscIT</course>
+		</plan>
+	</student>
+	<student>
+		<name fname="Maharshi" lname="Patel">
+		</name>
+		<id>121212</id>
+		<plan>
+			<course>iMscIT</course>
+		</plan>
+	</student><student>
+		<name fname="Maharshi" lname="Patel">
+		</name>
+		<id>121212</id>
+		<plan>
+			<course>iMscIT</course>
+		</plan>
+	</student>
+</students>
