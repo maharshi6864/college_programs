@@ -1,23 +1,20 @@
-// Write program for swapping two values of different data type with use of function template.
-
 #include <iostream>
 
 using namespace std;
 
-template <typename T>
-
-void swapValues(T &a,T &b)
+template <typename T1, typename T2>
+void mySwap(T1 &a, T2 &b) // Pass by reference; to change value inside function
 {
-    T temp=a;
-    a=b;
-    b=temp;
+    T1 temp;
+    temp = a;
+    a = b;
+    b = temp;
 }
-
 int main()
 {
-    int a=10,b=20;
-    cout<<"values before swapping : a = "<<a<<" b = "<<b<<endl<<endl;
-    swapValues(a,b);
-    cout<<"values after swapping : a = "<<a<<" b = "<<b;
-    return 0;
+    int a = 69;   // E
+    char b = 'R'; // C
+    cout << "Before Swap a: " << a << ",b:" << b << endl;
+    mySwap(a, b);
+    cout << "After Swap a: " << a << ",b:" << b;
 }
