@@ -27,9 +27,10 @@ int main()
     }
 
     cout << "Value at index " << index << " is " << arr[index];
-  }catch(const runtime_error)
+  }
+  catch (const runtime_error &e)
   {
-
+    cout << e.what();
   }
 
   return 0;
