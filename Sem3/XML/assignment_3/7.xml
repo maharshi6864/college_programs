@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+	
+	<item xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<name></name>
+		<category>
+			<veg>salad</veg>
+			<nonVeg></nonVeg>
+		</category>
+		<companyInfo>
+			<phoneNo></phoneNo>
+			<address></address>
+		</companyInfo>
+	</item>

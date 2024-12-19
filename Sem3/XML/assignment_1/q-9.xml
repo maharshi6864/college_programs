@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+		
+		<letter>
+			<contact type="manager">
+				<name></name>
+				<address></address>
+				<city></city>
+				<pin></pin>
+				<state></state>
+				<flag gender="male" ></flag>
+			</contact>
+			<salutation></salutation>
+			<paragraph></paragraph>
+			<closing></closing>
+			<signature></signature>
+		</letter>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE student_info SYSTEM "q-10.dtd">
+<student_info>
+    <student which_course="C_101" contact_no="1212121">
+        <name>&stud_name;</name>
+    </student>
+    <course c_id="C_101">
+        <name>jhdfv</name>
+    </course>
+    <subject name="Java"> </subject>
+</student_info>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Student>
+  <student_name>
+    Maharshi patel
+  </student_name>
+  <personal_info>
+    <address>Friends PG</address>
+    <DOB>13/09/2004</DOB>
+    <gender>male</gender>
+    <mobile_no>1234567890</mobile_no>
+    <age>20</age>
+    <qualification>BscIT</qualification>
+  </personal_info>
+</Student>

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+	<email>
+		<from></from>
+		<to></to>
+		<content>
+			<person></person>
+			<exercises>
+				<exercise></exercise>
+				<topic></topic>
+				<description></description>
+			</exercises>
+		</content>
+		<course></course>
+	</email>

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+	
+	<Employees xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<employee>
+				<employeeNumber>1223212</employeeNumber>
+				<name>Maharshi Patel</name>
+				<designation></designation>
+				<salary>122.22</salary>
+			</employee>
+	</Employees>

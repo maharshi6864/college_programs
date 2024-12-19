@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+	
+	<!DOCTYPE email SYSTEM "q-2.dtd">
+	<email>
+		<message from="maharshi" to="aarsh" subject="introduction">
+		Hello world</message>
+	</email>

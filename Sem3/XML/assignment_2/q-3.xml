@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+	
+	<!DOCTYPE order_detail [
+		<!ELEMENT order_detail (order_number,(order_amount)?,(item_price)*,(item_name)+,(quantity)*)>
+		<!ELEMENT order_number (#PCDATA)>
+		<!ATTLIST order_number order_date CDATA  #IMPLIED>
+		<!ELEMENT order_date (#PCDATA)>
+		<!ELEMENT order_amount (#PCDATA)>
+		<!ELEMENT item_price (#PCDATA)>
+		<!ELEMENT item_name (#PCDATA)>
+		<!ELEMENT quantity (#PCDATA)>
+				]>
+				
+		<order_detail>
+			<order_number order_date="12/02/2024">order 1</order_number>
+			<order_amount>34,232</order_amount>
+			<item_price>12,232</item_price>
+			<item_name>shirt</item_name>
+			<quantity>3</quantity>
+		</order_detail>
+	
+	
+	

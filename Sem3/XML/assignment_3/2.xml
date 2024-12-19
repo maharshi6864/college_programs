@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+	
+	<lunch xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<starter>
+			<juicer>Orange Juice</juicer>
+		</starter>
+		<mainCourse>
+			<vegLunch>Panner Tikka</vegLunch>
+		</mainCourse>
+		<dessert>
+			<iceCream>Chocolate</iceCream>
+		</dessert>
+	</lunch>
+	
