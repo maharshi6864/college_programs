@@ -10,5 +10,8 @@
       "username": "maharshi6864",
       "database": "bollywood"
     }
-  ]
+  ],
+  "files.associations": {
+    "ostream": "cpp"
+  }
 }
