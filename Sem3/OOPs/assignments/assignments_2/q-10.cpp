@@ -8,8 +8,8 @@ using namespace std;
 class Employee
 {
 private:
-  string name;
   double salary;
+  string name;
   int age;
 
 public:
@@ -42,6 +42,7 @@ int main()
   Employee emp1("Maharshi", 19, 90000);
   Employee emp2("Aarsh", 18, 190000);
   Employee emp3("Rahul", 20, 190000);
+
   emp1.getDate();
   emp2.getDate();
   emp3.getDate();

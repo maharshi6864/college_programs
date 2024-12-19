@@ -1,8 +1,0 @@
-<!ELEMENT  car (id,company*,name,model,engine,mileage)>
-<!ELEMENT id (#PCDATA)>
-<!ELEMENT company (#PCDATA)>
-<!ELEMENT name (#PCDATA)>
-<!ELEMENT model (#PCDATA)>
-<!ELEMENT engine (#PCDATA)>
-<!ELEMENT mileage (#PCDATA)>
-<!ATTLIST car year CDATA #REQUIRED>

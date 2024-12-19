@@ -10,7 +10,6 @@ int sumOfNumber(int n)
   {
     return sumOfNumber(n - 1) + n;
   }
-
   return 0;
 }
 

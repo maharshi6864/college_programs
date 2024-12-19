@@ -8,11 +8,10 @@ template <typename T>
 
 class Calculator
 {
-private:
+public:
     T a;
     T b;
-
-public:
+    
     Calculator(T a, T b)
     {
         this->a = a;
@@ -42,9 +41,9 @@ public:
 int main()
 {
     Calculator<int> obj(48, 12);
-    cout << "addition is  : " << obj.sumTwoNumber()<<endl;
-    cout << "subtraction is  : " << obj.subTwoNumber()<<endl;
-    cout << "multiply is  : " << obj.multiTwoNumber()<<endl;
-    cout << "division is  : " << obj.divTwoNumber()<<endl;
+    cout << "addition is  : " << obj.sumTwoNumber() << endl;
+    cout << "subtraction is  : " << obj.subTwoNumber() << endl;
+    cout << "multiply is  : " << obj.multiTwoNumber() << endl;
+    cout << "division is  : " << obj.divTwoNumber() << endl;
     return 0;
 }

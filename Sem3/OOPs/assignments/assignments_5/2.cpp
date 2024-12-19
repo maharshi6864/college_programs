@@ -2,31 +2,40 @@
 
 using namespace std;
 
-int main()
+class Check
 {
 
-  int dividend, divisor;
-
-  cout << "enter dividend : ";
-  cin >> dividend;
-
-  cout << "enter divisor : ";
-  cin >> divisor;
-
-  try
+public:
+  void example()
   {
-    if (divisor == 0)
+    int dividend, divisor;
+
+    cout << "enter dividend : ";
+    cin >> dividend;
+
+    cout << "enter divisor : ";
+    cin >> divisor;
+
+    try
     {
-      throw runtime_error("Invalid Input!");
+      if (divisor == 0)
+      {
+        throw runtime_error("Invalid Input!");
+      }
+
+      int q = dividend / divisor;
+      cout << "Quitont is : " << q;
     }
-
-    int q = dividend / divisor;
-    cout << "Quitont is : " << q;
+    catch (const runtime_error &e)
+    {
+      cout << e.what();
+    }
   }
-  catch (const runtime_error &e)
-  {
-    cout << e.what();
-  }
+};
 
+int main()
+{
+  Check che;
+  che.example();
   return 0;
 }
