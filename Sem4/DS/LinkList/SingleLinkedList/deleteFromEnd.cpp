@@ -40,7 +40,26 @@ node *createList()
   return start;
 }
 
-void display(node *ptr)
+node *deleteNodeFromEnd(node *ptr)
+{
+  node *start = ptr;
+  node *preNode;
+
+  while (ptr != NULL)
+  {
+    if (ptr->next == NULL)
+    {
+      preNode->next = NULL;
+      break;
+    }
+    preNode = ptr;
+    ptr = ptr->next;
+  }
+
+  return start;
+}
+
+void viewLinkedList(node *ptr)
 {
   if (ptr == NULL)
   {
@@ -49,7 +68,7 @@ void display(node *ptr)
   int index = 0;
   while (ptr != NULL)
   {
-    cout << "node " << ++index << "::" << ptr->data << "\n";
+    cout << "node " << index++ << "::" << ptr->data << "\n";
     ptr = ptr->next;
   }
 
@@ -59,6 +78,8 @@ void display(node *ptr)
 int main()
 {
   node *start = createList();
-  display(start);
+  viewLinkedList(start);
+  start = deleteNodeFromEnd(start);
+  viewLinkedList(start);
   return 0;
 }
