@@ -48,7 +48,7 @@ void display(node *ptr)
   int count = 0;
   while (ptr != NULL)
   {
-    cout << "node :: " << count << " " << ptr->data << " " << endl;
+    cout << "node " << count << " :: " << ptr->data << " " << endl;
     ptr = ptr->next;
     count++;
   }

@@ -43,6 +43,25 @@ node *create_node()
   return start;
 }
 
+node *insertFromEnd(node *ptr, int data)
+{
+  node *start = ptr;
+  while (ptr != NULL)
+  {
+    if (ptr->next == NULL)
+    {
+      node *new_node = new node();
+      new_node->data = data;
+      ptr->next = new_node;
+      new_node->prev = ptr;
+      break;
+    }
+    ptr = ptr->next;
+  }
+
+  return start;
+}
+
 void display(node *ptr)
 {
   int count = 0;
@@ -57,6 +76,11 @@ void display(node *ptr)
 int main()
 {
   node *dll = create_node();
+  display(dll);
+  int number;
+  cout << "Enter data for new node from end : ";
+  cin >> number;
+  dll = insertFromEnd(dll, number);
   display(dll);
   return 0;
 }

@@ -43,6 +43,22 @@ node *create_node()
   return start;
 }
 
+node *deleteFromEnd(node *ptr)
+{
+  node *start = ptr;
+  while (ptr != NULL)
+  {
+    if (ptr->next == NULL)
+    {
+      node *preNode = ptr->prev;
+      preNode->next = NULL;
+      break;
+    }
+    ptr = ptr->next;
+  }
+  return start;
+}
+
 void display(node *ptr)
 {
   int count = 0;
@@ -57,6 +73,9 @@ void display(node *ptr)
 int main()
 {
   node *dll = create_node();
+  display(dll);
+  dll = deleteFromEnd(dll);
+  cout << "End node deleted." << endl;
   display(dll);
   return 0;
 }

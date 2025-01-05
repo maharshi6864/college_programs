@@ -43,6 +43,11 @@ node *create_node()
   return start;
 }
 
+node *deleteFromStart(node *ptr)
+{
+  return ptr->next;
+}
+
 void display(node *ptr)
 {
   int count = 0;
@@ -57,6 +62,9 @@ void display(node *ptr)
 int main()
 {
   node *dll = create_node();
+  display(dll);
+  dll = deleteFromStart(dll);
+  cout << "Start node deleted." << endl;
   display(dll);
   return 0;
 }

@@ -43,6 +43,24 @@ node *create_node()
   return start;
 }
 
+node *deleteFromMid(node *ptr, int index)
+{
+  node *start = ptr;
+  int count = 0;
+  while (ptr != NULL)
+  {
+    if (index == count)
+    {
+      node *preNode = ptr->prev;
+      node *postNode = ptr->next;
+      preNode->next = postNode;
+    }
+    ptr = ptr->next;
+    count++;
+  }
+  return start;
+}
+
 void display(node *ptr)
 {
   int count = 0;
@@ -57,6 +75,12 @@ void display(node *ptr)
 int main()
 {
   node *dll = create_node();
+  display(dll);
+  int index;
+  cout << "Enter index to delete its node !";
+  cin >> index;
+  dll = deleteFromMid(dll, index);
+  cout << "End node deleted." << endl;
   display(dll);
   return 0;
 }

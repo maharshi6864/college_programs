@@ -43,6 +43,29 @@ node *create_node()
   return start;
 }
 
+node *insertFromMid(node *ptr, int index, int data)
+{
+  node *start = ptr;
+  int count = 0;
+  while (ptr != NULL)
+  {
+    if (index == count)
+    {
+      node *post_node = ptr->next;
+      node *new_node = new node();
+      new_node->data = data;
+      new_node->prev = ptr;
+      new_node->next = post_node;
+      ptr->next = new_node;
+      break;
+    }
+    ptr = ptr->next;
+    count++;
+  }
+
+  return start;
+}
+
 void display(node *ptr)
 {
   int count = 0;
@@ -57,6 +80,14 @@ void display(node *ptr)
 int main()
 {
   node *dll = create_node();
+  display(dll);
+  int number;
+  int index;
+  cout << "Enter index to enter node after it : ";
+  cin >> index;
+  cout << "Enter data for new node from middle : ";
+  cin >> number;
+  dll = insertFromMid(dll, index, number);
   display(dll);
   return 0;
 }
