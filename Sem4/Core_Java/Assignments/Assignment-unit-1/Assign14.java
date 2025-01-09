@@ -1,0 +1,19 @@
+public class Assign14 {
+  public static void main(String[] args) {
+    int number = 12345;
+    int newNumber = 0;
+    while (number != 0) {
+      int re = number % 10;
+      newNumber *= 10;
+      newNumber += re;
+      number /= 10;
+    }
+
+    if (number == newNumber) {
+      System.out.println("Number is a palindrom number !!");
+    } else {
+      System.out.println("Number is not a palindrom number !!");
+    }
+
+  }
+}
