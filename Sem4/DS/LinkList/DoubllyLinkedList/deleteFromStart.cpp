@@ -10,10 +10,11 @@ public:
   node *next;
 };
 
-node *create_node()
+node *start = NULL;
+node *rear = NULL;
+
+void create_node()
 {
-  node *start = NULL;
-  node *dummy = NULL;
   int number;
   cout << "Enter data for doublly linked list : \n";
   cout << "Enter -1 to end entering data.\n";
@@ -28,28 +29,29 @@ node *create_node()
       new_node->prev = NULL;
       new_node->next = NULL;
       start = new_node;
-      dummy = new_node;
+      rear = new_node;
     }
     else
     {
       new_node->data = number;
-      new_node->prev = dummy;
-      dummy->next = new_node;
-      dummy = new_node;
+      new_node->prev = rear;
+      rear->next = new_node;
+      rear = new_node;
     }
     cin >> number;
   }
-
-  return start;
 }
 
-node *deleteFromStart(node *ptr)
+void deleteFromStart()
 {
-  return ptr->next;
+  node *ptr = start;
+  free(ptr);
+  start = start->next;
 }
 
-void display(node *ptr)
+void display()
 {
+  node *ptr = start;
   int count = 0;
   while (ptr != NULL)
   {
@@ -61,10 +63,10 @@ void display(node *ptr)
 
 int main()
 {
-  node *dll = create_node();
-  display(dll);
-  dll = deleteFromStart(dll);
+  create_node();
+  display();
+  deleteFromStart();
   cout << "Start node deleted." << endl;
-  display(dll);
+  display();
   return 0;
 }

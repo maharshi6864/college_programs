@@ -10,10 +10,11 @@ public:
   node *next;
 };
 
-node *create_node()
+node *start = NULL;
+node *rear = NULL;
+
+void create_node()
 {
-  node *start = NULL;
-  node *dummy = NULL;
   int number;
   cout << "Enter data for doublly linked list : \n";
   cout << "Enter -1 to end entering data.\n";
@@ -28,46 +29,43 @@ node *create_node()
       new_node->prev = NULL;
       new_node->next = NULL;
       start = new_node;
-      dummy = new_node;
+      rear = new_node;
     }
     else
     {
       new_node->data = number;
-      new_node->prev = dummy;
-      dummy->next = new_node;
-      dummy = new_node;
+      new_node->prev = rear;
+      rear->next = new_node;
+      rear = new_node;
     }
     cin >> number;
   }
-
-  return start;
 }
 
-node *insertFromMid(node *ptr, int index, int data)
+void insertFromMid(int index, int number)
 {
-  node *start = ptr;
+  node *ptr = start;
   int count = 0;
   while (ptr != NULL)
   {
     if (index == count)
     {
-      node *post_node = ptr->next;
       node *new_node = new node();
-      new_node->data = data;
-      new_node->prev = ptr;
-      new_node->next = post_node;
+      new_node->data = number;
+      ptr->next->prev = new_node;
+      new_node->next = ptr->next;
       ptr->next = new_node;
+      new_node->prev = ptr;
       break;
     }
     ptr = ptr->next;
     count++;
   }
-
-  return start;
 }
 
-void display(node *ptr)
+void display()
 {
+  node *ptr = start;
   int count = 0;
   while (ptr != NULL)
   {
@@ -79,15 +77,15 @@ void display(node *ptr)
 
 int main()
 {
-  node *dll = create_node();
-  display(dll);
+  create_node();
+  display();
   int number;
   int index;
   cout << "Enter index to enter node after it : ";
   cin >> index;
   cout << "Enter data for new node from middle : ";
   cin >> number;
-  dll = insertFromMid(dll, index, number);
-  display(dll);
+  insertFromMid(index, number);
+  display();
   return 0;
 }
