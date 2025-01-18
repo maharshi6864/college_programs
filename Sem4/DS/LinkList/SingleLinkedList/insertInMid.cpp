@@ -9,10 +9,11 @@ public:
   node *next;
 };
 
-node *createList()
+node *start = NULL;
+node *rear = NULL;
+
+void createList()
 {
-  node *start = NULL;
-  node *rear = NULL;
   node *newNode;
   int number;
   cout << "Enter -1 to end entering data !!" << endl;
@@ -20,7 +21,6 @@ node *createList()
   cin >> number;
   while (number != -1)
   {
-
     newNode = new node();
     newNode->data = number;
     newNode->next = NULL;
@@ -34,15 +34,13 @@ node *createList()
       rear->next = newNode;
       rear = newNode;
     }
-
     cin >> number;
   }
-  return start;
 }
 
-node *insertNodeFromMid(node *ptr, int index, int value)
+void insertNodeFromMid(int index, int value)
 {
-  node *start = ptr;
+  node *ptr = start;
   node *newNode = new node();
   newNode->data = value;
   int count = 0;
@@ -58,12 +56,11 @@ node *insertNodeFromMid(node *ptr, int index, int value)
     ptr = ptr->next;
     count++;
   }
-
-  return start;
 }
 
-void viewLinkedList(node *ptr)
+void viewLinkedList()
 {
+  node *ptr = start;
   if (ptr == NULL)
   {
     cout << "Node is empty!!";
@@ -80,15 +77,15 @@ void viewLinkedList(node *ptr)
 
 int main()
 {
-  node *start = createList();
-  viewLinkedList(start);
+  createList();
+  viewLinkedList();
   int value;
   int index;
   cout << "Enter index for inserting starting node : ";
   cin >> index;
   cout << "Enter value for inserting starting node : ";
   cin >> value;
-  start = insertNodeFromMid(start, index, value);
-  viewLinkedList(start);
+  insertNodeFromMid(index, value);
+  viewLinkedList();
   return 0;
 }

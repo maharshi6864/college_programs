@@ -9,10 +9,11 @@ public:
   node *next;
 };
 
-node *createList()
+node *start = NULL;
+node *rear = NULL;
+
+void createList()
 {
-  node *start = NULL;
-  node *rear = NULL;
   node *newNode;
   int number;
   cout << "Enter -1 to end entering data !!" << endl;
@@ -24,6 +25,7 @@ node *createList()
     newNode = new node();
     newNode->data = number;
     newNode->next = NULL;
+
     if (start == NULL)
     {
       start = newNode;
@@ -37,28 +39,29 @@ node *createList()
 
     cin >> number;
   }
-  return start;
 }
 
-void display(node *ptr)
+void display()
 {
+  node *ptr = start;
+
   if (ptr == NULL)
   {
     cout << "Node is empty!!";
   }
+
   int index = 0;
   while (ptr != NULL)
   {
     cout << "node " << index++ << "::" << ptr->data << "\n";
     ptr = ptr->next;
   }
-
   cout << endl;
 }
 
 int main()
 {
-  node *start = createList();
-  display(start);
+  createList();
+  display();
   return 0;
 }

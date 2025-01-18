@@ -9,10 +9,12 @@ public:
   node *next;
 };
 
-node *createList()
+node *start = NULL;
+node *rear = NULL;
+
+void createList()
 {
-  node *start = NULL;
-  node *rear = NULL;
+
   node *newNode;
   int number;
   cout << "Enter -1 to end entering data !!" << endl;
@@ -37,12 +39,11 @@ node *createList()
 
     cin >> number;
   }
-  return start;
 }
 
-node *insertNodeFromEnd(node *ptr, int value)
+void insertNodeFromEnd(int value)
 {
-  node *start = ptr;
+  node *ptr = start;
   node *newNode = new node();
   newNode->data = value;
   while (ptr != NULL)
@@ -54,12 +55,11 @@ node *insertNodeFromEnd(node *ptr, int value)
     }
     ptr = ptr->next;
   }
-
-  return start;
 }
 
-void viewLinkedList(node *ptr)
+void viewLinkedList()
 {
+  node *ptr = start;
   if (ptr == NULL)
   {
     cout << "Node is empty!!";
@@ -70,18 +70,17 @@ void viewLinkedList(node *ptr)
     cout << "node " << index++ << "::" << ptr->data << "\n";
     ptr = ptr->next;
   }
-
   cout << endl;
 }
 
 int main()
 {
-  node *start = createList();
-  viewLinkedList(start);
+  createList();
+  viewLinkedList();
   cout << "Enter value for inserting starting node : ";
   int value;
   cin >> value;
-  start = insertNodeFromEnd(start, value);
-  viewLinkedList(start);
+  insertNodeFromEnd(value);
+  viewLinkedList();
   return 0;
 }

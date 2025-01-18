@@ -9,10 +9,11 @@ public:
   node *next;
 };
 
-node *createList()
+node *start = NULL;
+node *rear = NULL;
+
+void createList()
 {
-  node *start = NULL;
-  node *rear = NULL;
   node *newNode;
   int number;
   cout << "Enter -1 to end entering data !!" << endl;
@@ -24,6 +25,7 @@ node *createList()
     newNode = new node();
     newNode->data = number;
     newNode->next = NULL;
+
     if (start == NULL)
     {
       start = newNode;
@@ -37,12 +39,11 @@ node *createList()
 
     cin >> number;
   }
-  return start;
 }
 
-node *deleteNodeFromEnd(node *ptr)
+void deleteNodeFromEnd()
 {
-  node *start = ptr;
+  node *ptr = start;
   node *preNode;
 
   while (ptr != NULL)
@@ -50,36 +51,37 @@ node *deleteNodeFromEnd(node *ptr)
     if (ptr->next == NULL)
     {
       preNode->next = NULL;
+      free(ptr);
       break;
     }
     preNode = ptr;
     ptr = ptr->next;
   }
-
-  return start;
 }
 
-void viewLinkedList(node *ptr)
+void viewLinkedList()
 {
+  node *ptr = start;
+
   if (ptr == NULL)
   {
     cout << "Node is empty!!";
   }
+
   int index = 0;
   while (ptr != NULL)
   {
     cout << "node " << index++ << "::" << ptr->data << "\n";
     ptr = ptr->next;
   }
-
   cout << endl;
 }
 
 int main()
 {
-  node *start = createList();
-  viewLinkedList(start);
-  start = deleteNodeFromEnd(start);
-  viewLinkedList(start);
+  createList();
+  viewLinkedList();
+  deleteNodeFromEnd();
+  viewLinkedList();
   return 0;
 }

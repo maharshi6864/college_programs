@@ -9,10 +9,11 @@ public:
   node *next;
 };
 
-node *createList()
+node *start = NULL;
+node *rear = NULL;
+
+void createList()
 {
-  node *start = NULL;
-  node *rear = NULL;
   node *newNode;
   int number;
   cout << "Enter -1 to end entering data !!" << endl;
@@ -34,15 +35,13 @@ node *createList()
       rear->next = newNode;
       rear = newNode;
     }
-
     cin >> number;
   }
-  return start;
 }
 
-node *deleteNodeFromMid(node *ptr, int index)
+void deleteNodeFromMid(int index)
 {
-  node *start = ptr;
+  node *ptr = start;
   node *preNode;
   int count = 0;
   while (ptr != NULL)
@@ -50,18 +49,18 @@ node *deleteNodeFromMid(node *ptr, int index)
     if (count == index)
     {
       preNode->next = ptr->next;
+      free(ptr);
       break;
     }
     preNode = ptr;
     ptr = ptr->next;
     count++;
   }
-
-  return start;
 }
 
-void viewLinkedList(node *ptr)
+void viewLinkedList()
 {
+  node *ptr = start;
   if (ptr == NULL)
   {
     cout << "Node is empty!!";
@@ -72,18 +71,17 @@ void viewLinkedList(node *ptr)
     cout << "node " << index++ << "::" << ptr->data << "\n";
     ptr = ptr->next;
   }
-
   cout << endl;
 }
 
 int main()
 {
-  node *start = createList();
-  viewLinkedList(start);
+  createList();
+  viewLinkedList();
   cout << "Enter index to delete the node : ";
   int index;
   cin >> index;
-  start = deleteNodeFromMid(start, index);
-  viewLinkedList(start);
+  deleteNodeFromMid(index);
+  viewLinkedList();
   return 0;
 }
