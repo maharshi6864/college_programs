@@ -9,25 +9,26 @@ public:
   node *next;
 };
 
-node *createList()
+node *start = NULL;
+node *rear = NULL;
+
+void create_node()
 {
-  node *start = NULL;
-  node *rear = NULL;
-  node *newNode;
   int number;
-  cout << "Enter -1 to end entering data !!" << endl;
-  cout << "Enter data  : " << endl;
+  cout << "Enter data for circullar singlly linked list : \n";
+  cout << "Enter -1 to end entering data.\n";
   cin >> number;
+
   while (number != -1)
   {
-
-    newNode = new node();
+    node *newNode = new node();
     newNode->data = number;
+
     if (start == NULL)
     {
+      newNode->next = newNode;
       start = newNode;
       rear = newNode;
-      start->next = rear;
     }
     else
     {
@@ -35,30 +36,26 @@ node *createList()
       newNode->next = start;
       rear = newNode;
     }
-
     cin >> number;
   }
-  return start;
 }
 
-void display(node *ptr)
+void display()
 {
-
-  int index = 0;
-  node *start = ptr;
-
+  node *ptr = start;
+  int count = 0;
   do
   {
-    cout << "node " << index++ << "::" << ptr->data << "\n";
+    cout << "node " << count << " :: " << ptr->data << endl;
     ptr = ptr->next;
+    count++;
   } while (ptr != start);
-
   cout << endl;
 }
 
-void deleteFromMiddle(node *ptr, int index)
+void deleteFromMiddle(int index)
 {
-
+  node *ptr = start;
   int count = 0;
   node *start = ptr;
   node *previous = NULL;
@@ -78,12 +75,12 @@ void deleteFromMiddle(node *ptr, int index)
 
 int main()
 {
-  node *start = createList();
-  display(start);
+  create_node();
+  display();
   int index;
   cout << "Enter index you want to delete : ";
   cin >> index;
-  deleteFromMiddle(start, index);
-  display(start);
+  deleteFromMiddle(index);
+  display();
   return 0;
 }

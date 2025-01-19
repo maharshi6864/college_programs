@@ -9,16 +9,19 @@ public:
   node *next;
 };
 
-node *createLinkedList()
+node *start = NULL;
+node *rear = NULL;
+
+void createList()
 {
+
   int number;
-  cout << "Enter -1 to end entering data !!" << endl;
-  cout << "Enter data  : " << endl;
+  cout << "Enter data for circullar singlly linked list : \n";
+  cout << "Enter -1 to end entering data.\n";
   cin >> number;
-  node *start = NULL;
-  node *rear = NULL;
   while (number != -1)
   {
+
     node *newNode = new node();
     newNode->data = number;
     if (start == NULL)
@@ -29,30 +32,33 @@ node *createLinkedList()
     }
     else
     {
-      newNode->next = start;
       rear->next = newNode;
+      newNode->next = start;
       rear = newNode;
     }
+
     cin >> number;
   }
-  return start;
 }
 
-void displayLinkedList(node *ptr)
+void display()
 {
+  node *ptr = start;
+  int index = 0;
   node *start = ptr;
-  int count = 0;
+
   do
   {
-    cout << "node " << count << ":: " << ptr->data << endl;
+    cout << "node " << index++ << "::" << ptr->data << "\n";
     ptr = ptr->next;
-    count++;
   } while (ptr != start);
+
+  cout << endl;
 }
 
-node *insertAtEnd(node *ptr, int number)
+void insertAtEnd(int number)
 {
-  node *start = ptr;
+  node *ptr = start;
   node *newNode = new node();
   newNode->data = number;
   do
@@ -65,18 +71,16 @@ node *insertAtEnd(node *ptr, int number)
     }
     ptr = ptr->next;
   } while (ptr != start);
-
-  return start;
 }
 
 int main()
 {
-  node *start = createLinkedList();
-  displayLinkedList(start);
+  createList();
+  display();
   int number;
   cout << "Enter data to insert at end : ";
   cin >> number;
-  start = insertAtEnd(start, number);
+  insertAtEnd(number);
   cout << "Displaying the Circular LinkedList after insertation at end " << endl;
-  displayLinkedList(start);
+  display();
 }

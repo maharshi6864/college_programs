@@ -9,19 +9,20 @@ public:
   node *next;
 };
 
-node *createList()
+node *start = NULL;
+node *rear = NULL;
+
+void createList()
 {
-  node *start = NULL;
-  node *rear = NULL;
-  node *newNode;
+
   int number;
-  cout << "Enter -1 to end entering data !!" << endl;
-  cout << "Enter data  : " << endl;
+  cout << "Enter data for circullar singlly linked list : \n";
+  cout << "Enter -1 to end entering data.\n";
   cin >> number;
   while (number != -1)
   {
 
-    newNode = new node();
+    node *newNode = new node();
     newNode->data = number;
     if (start == NULL)
     {
@@ -38,12 +39,11 @@ node *createList()
 
     cin >> number;
   }
-  return start;
 }
 
-void display(node *ptr)
+void display()
 {
-
+  node *ptr = start;
   int index = 0;
   node *start = ptr;
 
@@ -56,12 +56,10 @@ void display(node *ptr)
   cout << endl;
 }
 
-void insertInMiddle(node *ptr, int index, int number)
+void insertInMiddle(int index, int number)
 {
-
+  node *ptr = start;
   int count = 0;
-  node *start = ptr;
-
   do
   {
     if (index == count)
@@ -70,6 +68,7 @@ void insertInMiddle(node *ptr, int index, int number)
       newNode->data = number;
       newNode->next = ptr->next;
       ptr->next = newNode;
+      break;
     }
 
     ptr = ptr->next;
@@ -81,14 +80,14 @@ void insertInMiddle(node *ptr, int index, int number)
 
 int main()
 {
-  node *start = createList();
-  display(start);
+  createList();
+  display();
   int index, number;
   cout << "Enter index from you want to add node  : ";
   cin >> index;
   cout << "Enter data you enter : ";
   cin >> number;
-  insertInMiddle(start, index, number);
-  display(start);
+  insertInMiddle(index, number);
+  display();
   return 0;
 }

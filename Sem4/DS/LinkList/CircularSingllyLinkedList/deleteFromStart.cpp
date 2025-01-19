@@ -12,23 +12,23 @@ public:
 node *start = NULL;
 node *rear = NULL;
 
-void createList()
+void create_node()
 {
-
   int number;
   cout << "Enter data for circullar singlly linked list : \n";
   cout << "Enter -1 to end entering data.\n";
   cin >> number;
+
   while (number != -1)
   {
-
     node *newNode = new node();
     newNode->data = number;
+
     if (start == NULL)
     {
+      newNode->next = newNode;
       start = newNode;
       rear = newNode;
-      start->next = rear;
     }
     else
     {
@@ -36,43 +36,37 @@ void createList()
       newNode->next = start;
       rear = newNode;
     }
-
     cin >> number;
   }
+}
+
+void deleteFromStart()
+{
+  node *ptr = start;
+  start = start->next;
+  rear->next = start;
+  free(ptr);
 }
 
 void display()
 {
   node *ptr = start;
-  int index = 0;
-  node *start = ptr;
-
+  int count = 0;
   do
   {
-    cout << "node " << index++ << "::" << ptr->data << "\n";
+    cout << "node " << count << " :: " << ptr->data << endl;
     ptr = ptr->next;
+    count++;
   } while (ptr != start);
-
   cout << endl;
-}
-
-void insertAtStart(int number)
-{
-  node *newNode = new node();
-  newNode->data = number;
-  newNode->next = start;
-  start = newNode;
-  rear->next = start;
 }
 
 int main()
 {
-  createList();
+  create_node();
   display();
-  int number;
-  cout << "Enter data to insert at start : ";
-  cin >> number;
-  insertAtStart(number);
-  cout << "Displaying the Circular LinkedList after insertation at start " << endl;
+  deleteFromStart();
+  cout << "Start node deleted." << endl;
   display();
+  return 0;
 }
