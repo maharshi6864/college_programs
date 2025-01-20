@@ -2,35 +2,36 @@ import java.util.Scanner;
 
 public class Assign09 {
   public static void main(String[] args) {
-    Triangle tr1 = new Triangle();
     Scanner sc = new Scanner(System.in);
-    System.out.println("Enter Height of the triangle : ");
-    tr1.height = sc.nextFloat();
-    System.out.println("Enter Base of the triangle : ");
-    tr1.base = sc.nextFloat();
-    tr1.findArea();
 
-    Triangle tr2 = new Triangle();
-    System.out.println("Enter Height of the triangle : ");
+    System.out.println("Enter height of the traingle : ");
     float height = sc.nextFloat();
-    System.out.println("Enter Base of the triangle : ");
+    System.out.println("Enter height of the traingle : ");
     float base = sc.nextFloat();
-    tr2.findArea(height, base);
 
+    Area area1 = new Area(height, base);
+
+
+    System.out.println("Enter height of the traingle : ");
+    int l = sc.nextInt();
+    System.out.println("Enter height of the traingle : ");
+    int b = sc.nextInt();
+    
+    Area area2 = new Area(l, b);
   }
 }
 
-class Triangle {
+class Area {
   float height;
   float base;
 
-  void findArea(float height, float base) {
+  Area(float height, float base) {
     float area = (height * base) / 2;
     System.out.println("Area of Triangle : " + area);
   }
 
-  void findArea() {
-    float area = (height * base) / 2;
-    System.out.println("Area of Triangle : " + area);
+  Area(int length, int breath) {
+    int area = length * breath;
+    System.out.println("Area of Rectangle : " + area);
   }
 }
