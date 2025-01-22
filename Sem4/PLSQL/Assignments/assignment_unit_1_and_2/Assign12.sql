@@ -18,8 +18,7 @@ begin
 
    if du = tot then
       dbms_output.put_line('Number is a armstrong number !!');
-   end if;
-   if du <> tot then
+   else
       dbms_output.put_line('Number is not a armstrong number !!');
    end if;
 end;
