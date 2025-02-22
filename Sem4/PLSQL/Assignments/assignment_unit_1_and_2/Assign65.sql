@@ -1,0 +1,1 @@
+-- Write a program to accept a string and count the no of individual chars

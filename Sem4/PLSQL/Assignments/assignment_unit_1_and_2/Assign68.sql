@@ -1,0 +1,1 @@
+-- 68. Write a program to accep the time in HH & MIN format and find the total senconds

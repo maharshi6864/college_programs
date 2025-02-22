@@ -1,0 +1,2 @@
+-- 44. Write a program to accept a year and check whether it is leap year or not . If it is leap year then
+-- display how many sundays present in that year

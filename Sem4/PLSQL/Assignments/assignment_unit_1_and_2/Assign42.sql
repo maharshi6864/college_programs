@@ -1,0 +1,1 @@
+-- 42. Write a program to accept a year and display all sundays along with the date

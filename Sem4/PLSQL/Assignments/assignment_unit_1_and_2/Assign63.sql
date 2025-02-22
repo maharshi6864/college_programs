@@ -1,0 +1,1 @@
+-- 63. WAP to accept the date and print all the weekdays along with the given date
