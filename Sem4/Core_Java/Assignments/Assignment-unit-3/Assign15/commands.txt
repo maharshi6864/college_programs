@@ -1,0 +1,6 @@
+(base) maharshi6864@maharshi6864:~/Desktop/COLLEGE_PROGRAMS/Sem4/Core_Java/Assignments/Assignment-unit-3$ javac -d . Assign15/Circle.java Assign15/OtherPackage/Area.java
+(base) maharshi6864@maharshi6864:~/Desktop/COLLEGE_PROGRAMS/Sem4/Core_Java/Assignments/Assignment-unit-3$ java Assign15.OtherPackage.Area
+Error: Could not find or load main class Assign15.OtherPackage.Area
+(base) maharshi6864@maharshi6864:~/Desktop/COLLEGE_PROGRAMS/Sem4/Core_Java/Assignments/Assignment-unit-3$ java -cp . Assign15.OtherPackage.Area
+Area of circle : 25446.900494077327
+(base) maharshi6864@maharshi6864:~/Desktop/COLLEGE_PROGRAMS/Sem4/Core_Java/Assignments/Assignment-unit-3$ 
