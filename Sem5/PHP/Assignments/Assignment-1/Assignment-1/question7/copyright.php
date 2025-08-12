@@ -1,0 +1,1 @@
+<footer><h2>huh ! copy from the @ copy right.php file !</h2></footer>
