@@ -13,6 +13,7 @@
   <ul>
     <li><a href="Assignment-1/navigatefile.php">Assignment 1</a></li>
     <li><a href="Assignment-2/navigatefile.php">Assignment 2</a></li>
+    <li><a href="Lab-5/navigatefile.php">Lab Exercise 5</a></li>
   </ul>
 
 </body>
