@@ -50,22 +50,26 @@ def main():
         print("Press \"1\" To Book Appointment.")
         print("Press \"2\" To Print Doctor List.")
         print("Press \"3\" To Book Appointment.")
-        print("Press \"q\" To Book Appointment.")
+        print("Press \"q\" To Quit Menu.")
         choice=input("Enter Choice : ")
 
         if choice=="1":
             book_appointment()
-        if choice=="2":
+        elif choice=="2":
             print("="*5,f" Doctor List ","="*5)
             for index, doc in enumerate(doctor_list, start=1): 
               print("="*5,f"No {index}.","="*5)
               doc.display_info()
 
-        if choice == "3":
+        elif choice == "3":
             print("="*5,"Current Appointments are","="*5)
             for appointments in appointement_list:
                 appointments.display_info()
-                    
+        elif choice == "q" or choice == "Q":
+            exit()
+        else:
+            print("!"*5,"Invalid Choice","!"*5)
+
 def book_appointment():
     global appointement_list
     global doctor_list
