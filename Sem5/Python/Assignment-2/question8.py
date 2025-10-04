@@ -13,3 +13,4 @@ try:
     frovowels.remove('a')  # frozenset is immutable, this will fail
 except Exception as e:
     print("Error:", e)
+    print("Error:", e)
